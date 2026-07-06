@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* shadcn variables mapped to the Village palette (spec §2) */
+@layer base {
+  :root {
+    --background: 39 62% 96%; /* cream #FBF6EE */
+    --foreground: 202 24% 18%; /* ink #22333B */
+    --card: 0 0% 100%;
+    --card-foreground: 202 24% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 202 24% 18%;
+    --primary: 166 44% 21%; /* pine #1E4D42 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 146 22% 93%; /* pine tint #EAF2EE */
+    --secondary-foreground: 166 44% 21%;
+    --muted: 39 30% 92%;
+    --muted-foreground: 168 8% 45%; /* sub #6B7A76 */
+    --accent: 40 100% 78%; /* butter #FFD98E */
+    --accent-foreground: 40 55% 30%;
+    --destructive: 6 100% 68%; /* coral #FF6B5B */
+    --destructive-foreground: 0 0% 100%;
+    --border: 43 26% 85%; /* #E3DCCF */
+    --input: 43 26% 85%;
+    --ring: 166 44% 21%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-cream text-ink font-body font-semibold antialiased;
+  }
+}
