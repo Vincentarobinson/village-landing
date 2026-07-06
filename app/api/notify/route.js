@@ -6,8 +6,9 @@ import { NextResponse } from "next/server";
  *
  * Inserts into the Supabase `launch_notifications` table (see
  * supabase/schema.sql) via the REST API — no client library needed.
- * If Supabase env vars are missing (local dev), logs and succeeds
- * so the UI can be tested without a backend.
+ * Uses the anon key with an insert-only RLS policy: the key can add
+ * signups but never read them. If env vars are missing (local dev),
+ * logs and succeeds so the UI can be tested without a backend.
  */
 
 const EMAIL_RE = /^\S+@\S+\.\S+$/;
@@ -41,7 +42,7 @@ export async function POST(request) {
   }
 
   const supabaseUrl = process.env.SUPABASE_URL;
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
   if (!supabaseUrl || !supabaseKey) {
     console.log("[notify] (no Supabase configured)", { method, contact, zip });
@@ -54,10 +55,15 @@ export async function POST(request) {
       apikey: supabaseKey,
       Authorization: `Bearer ${supabaseKey}`,
       "Content-Type": "application/json",
-      Prefer: "resolution=ignore-duplicates",
+      Prefer: "return=minimal",
     },
     body: JSON.stringify({ method, contact, zip }),
   });
+
+  // 409 = duplicate signup; treat as success (don't leak who's registered)
+  if (res.status === 409) {
+    return NextResponse.json({ ok: true });
+  }
 
   if (!res.ok) {
     const detail = await res.text().catch(() => "");
