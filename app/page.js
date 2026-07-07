@@ -134,6 +134,12 @@ export default function Home() {
             <a href="#faq" className="transition-colors hover:text-ink">
               FAQ
             </a>
+            <a
+              href="/sitters"
+              className="font-semibold text-pine transition-colors hover:text-ink"
+            >
+              Become a sitter
+            </a>
           </nav>
           <Button variant="coral" size="sm" className="h-9 px-4" onClick={openDialog}>
             <Bell className="h-3.5 w-3.5" /> Get notified
@@ -353,6 +359,7 @@ export default function Home() {
                 <a href="#features" className="text-sub hover:text-ink">Features</a>
                 <a href="#safety" className="text-sub hover:text-ink">Safety</a>
                 <a href="#faq" className="text-sub hover:text-ink">FAQ</a>
+                <a href="/sitters" className="text-sub hover:text-ink">Become a sitter</a>
               </div>
               <div className="flex flex-col gap-2.5">
                 <span className="font-semibold text-ink">Company</span>
