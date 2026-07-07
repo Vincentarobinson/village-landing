@@ -332,6 +332,12 @@ export default function Home() {
           <Button variant="coral" size="lg" className="mt-8" onClick={openDialog}>
             <Bell className="h-4 w-4" /> Get notified at launch
           </Button>
+          <p className="mt-6 text-sm text-sub">
+            Single mom who wants to help shape Village?{" "}
+            <a href="/ambassadors" className="font-semibold text-pine underline-offset-2 hover:underline">
+              Join the Founding Moms →
+            </a>
+          </p>
         </div>
       </section>
 
@@ -360,6 +366,7 @@ export default function Home() {
                 <a href="#safety" className="text-sub hover:text-ink">Safety</a>
                 <a href="#faq" className="text-sub hover:text-ink">FAQ</a>
                 <a href="/sitters" className="text-sub hover:text-ink">Become a sitter</a>
+                <a href="/ambassadors" className="text-sub hover:text-ink">Founding Moms</a>
               </div>
               <div className="flex flex-col gap-2.5">
                 <span className="font-semibold text-ink">Company</span>
