@@ -96,8 +96,8 @@ export function NotifyDialog({ open, onOpenChange, autoOpen = true }) {
             <DialogHeader>
               <DialogTitle>Be first in the Village</DialogTitle>
               <DialogDescription>
-                Get notified the moment the app launches. Atlanta first —
-                your zip helps us pick the next city.
+                One notification the moment Village launches near you. Your
+                ZIP decides where we open next.
               </DialogDescription>
             </DialogHeader>
 

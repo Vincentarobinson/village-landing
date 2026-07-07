@@ -3,11 +3,11 @@ import "./globals.css";
 export const metadata = {
   title: "Village — It takes a village. Find yours.",
   description:
-    "Village is a community app for single parents. Find verified single parents nearby, join meetups, and unlock local family deals. Launching first in Atlanta.",
+    "Village is the community app for single parents. Connect with verified single parents nearby, join meetups, and book background-checked sitters.",
   openGraph: {
     title: "Village — It takes a village. Find yours.",
     description:
-      "A community app for single parents: real connections, real meetups, real local deals. Launching in Atlanta.",
+      "The community app for single parents: real connections, real meetups, verified sitters, and local family deals.",
     type: "website",
   },
 };
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito:wght@600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

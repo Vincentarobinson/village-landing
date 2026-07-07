@@ -57,7 +57,7 @@ module.exports = {
       },
       fontFamily: {
         display: ["Fraunces", "Georgia", "serif"],
-        body: ["Nunito", "-apple-system", "sans-serif"],
+        body: ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
