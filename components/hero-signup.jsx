@@ -78,14 +78,15 @@ export function HeroSignup() {
           disabled={status === "sending"}
           className="h-13"
         >
-          {status === "sending" ? "Joining…" : "Get early access"}
+          {status === "sending" ? "Joining…" : "Notify me at launch"}
         </Button>
       </div>
       {error ? (
         <p className="mt-2.5 text-sm font-medium text-coral">{error}</p>
       ) : (
         <p className="mt-2.5 text-sm text-sub">
-          Free to join. Prefer a text instead? Use the button in the top corner.
+          Free to join — we&apos;ll notify you when Village launches near you.
+          Prefer a text? Use the button in the top corner.
         </p>
       )}
     </form>
