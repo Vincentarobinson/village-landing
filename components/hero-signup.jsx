@@ -84,7 +84,7 @@ export function HeroSignup() {
         </Button>
       </div>
       {error ? (
-        <p className="mt-2.5 text-sm font-medium text-coral">{error}</p>
+        <p className="mt-2.5 text-sm font-medium text-danger">{error}</p>
       ) : (
         <p className="mt-2.5 text-sm text-sub">
           Free to join — we&apos;ll notify you when Village launches near you.

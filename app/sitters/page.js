@@ -117,7 +117,7 @@ export default function SittersPage() {
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-2 lg:py-20">
           {/* left: pitch */}
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-coral">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-pine">
               For sitters
             </p>
             <h1 className="font-display text-[40px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl">
@@ -289,7 +289,7 @@ export default function SittersPage() {
                     </label>
 
                     {error && (
-                      <p className="text-sm font-medium text-coral">{error}</p>
+                      <p className="text-sm font-medium text-danger">{error}</p>
                     )}
 
                     <Button

@@ -251,7 +251,7 @@ export default function Home() {
       {/* features */}
       <section id="features" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-20">
         <div className="mb-12 max-w-2xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-coral">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-pine">
             What you get
           </p>
           <h2 className="font-display text-4xl font-semibold tracking-tight text-ink">
@@ -303,7 +303,7 @@ export default function Home() {
       {/* faq */}
       <section id="faq" className="mx-auto max-w-3xl scroll-mt-20 px-6 py-20">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-coral">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-pine">
             FAQ
           </p>
           <h2 className="font-display text-4xl font-semibold tracking-tight text-ink">

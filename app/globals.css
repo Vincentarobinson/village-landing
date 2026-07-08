@@ -5,25 +5,25 @@
 /* shadcn variables mapped to the Village palette (spec §2) */
 @layer base {
   :root {
-    --background: 39 62% 96%; /* cream #FBF6EE */
-    --foreground: 202 24% 18%; /* ink #22333B */
+    --background: 45 15% 96%; /* off-white #F7F6F2 */
+    --foreground: 160 4% 11%; /* ink #1A1D1C */
     --card: 0 0% 100%;
-    --card-foreground: 202 24% 18%;
+    --card-foreground: 160 4% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 202 24% 18%;
-    --primary: 166 44% 21%; /* pine #1E4D42 */
+    --popover-foreground: 160 4% 11%;
+    --primary: 159 61% 30%; /* emerald #1E7A5A */
     --primary-foreground: 0 0% 100%;
-    --secondary: 146 22% 93%; /* pine tint #EAF2EE */
-    --secondary-foreground: 166 44% 21%;
-    --muted: 39 30% 92%;
-    --muted-foreground: 168 8% 45%; /* sub #6B7A76 */
-    --accent: 40 100% 78%; /* butter #FFD98E */
-    --accent-foreground: 40 55% 30%;
-    --destructive: 6 100% 68%; /* coral #FF6B5B */
+    --secondary: 140 25% 93%; /* tint #E9F2EC */
+    --secondary-foreground: 159 61% 30%;
+    --muted: 45 12% 94%;
+    --muted-foreground: 165 4% 45%; /* sub #707875 */
+    --accent: 42 100% 70%; /* butter #FFD666 */
+    --accent-foreground: 40 55% 28%;
+    --destructive: 4 69% 51%; /* #D93A2B */
     --destructive-foreground: 0 0% 100%;
-    --border: 43 26% 85%; /* #E3DCCF */
-    --input: 43 26% 85%;
-    --ring: 166 44% 21%;
+    --border: 45 12% 90%; /* #E9E7E1 */
+    --input: 45 12% 90%;
+    --ring: 159 61% 30%;
     --radius: 1rem;
   }
 }

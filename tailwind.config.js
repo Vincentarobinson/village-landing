@@ -41,14 +41,15 @@ module.exports = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
-        /* Village brand tokens — spec §2 */
-        ink: "#22333B",
-        pine: "#1E4D42",
-        coral: "#FF6B5B",
-        butter: "#FFD98E",
-        cream: "#FBF6EE",
-        sub: "#6B7A76",
-        "pine-tint": "#EAF2EE",
+        /* Village brand tokens — v2 editorial theme */
+        ink: "#1A1D1C",
+        pine: "#1E7A5A",
+        coral: "#1A1D1C",
+        danger: "#D93A2B",
+        butter: "#FFD666",
+        cream: "#F7F6F2",
+        sub: "#707875",
+        "pine-tint": "#E9F2EC",
       },
       borderRadius: {
         lg: "var(--radius)",

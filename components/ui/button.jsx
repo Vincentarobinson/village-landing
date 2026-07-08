@@ -9,7 +9,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-pine text-white hover:bg-pine/90",
         coral:
-          "bg-coral text-white shadow-[0_8px_24px_rgba(255,107,91,0.35)] hover:-translate-y-0.5 transition-transform",
+          "bg-ink text-white shadow-[0_6px_20px_rgba(26,29,28,0.22)] hover:-translate-y-0.5 transition-transform",
         outline:
           "border-[1.5px] border-input bg-white text-ink hover:bg-secondary",
         ghost: "hover:bg-secondary text-ink",
