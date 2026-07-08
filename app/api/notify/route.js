@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendParentWelcome, addToAudience } from "@/lib/email";
 
 /*
  * POST /api/notify
@@ -67,6 +68,13 @@ export async function POST(request) {
   // 409 = duplicate signup; treat as success (don't leak who's registered)
   if (res.status === 409) {
     return NextResponse.json({ ok: true });
+  }
+
+  if (res.ok && method === "email") {
+    await Promise.all([
+      sendParentWelcome(contact),
+      addToAudience("RESEND_AUDIENCE_PARENTS", contact),
+    ]);
   }
 
   if (!res.ok) {

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendSitterWelcome, addToAudience } from "@/lib/email";
 
 /*
  * POST /api/sitter-apply
@@ -72,6 +73,14 @@ export async function POST(request) {
 
   if (res.status === 409) {
     return NextResponse.json({ ok: true }); // already applied
+  }
+
+  if (res.ok) {
+    const firstName = fullName.split(" ")[0];
+    await Promise.all([
+      sendSitterWelcome(email, firstName),
+      addToAudience("RESEND_AUDIENCE_SITTERS", email, firstName),
+    ]);
   }
 
   if (!res.ok) {

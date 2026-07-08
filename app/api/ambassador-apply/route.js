@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendAmbassadorWelcome, addToAudience } from "@/lib/email";
 
 /* POST /api/ambassador-apply — Founding Moms program applications. */
 
@@ -55,6 +56,14 @@ export async function POST(request) {
   });
 
   if (res.status === 409) return NextResponse.json({ ok: true });
+
+  if (res.ok) {
+    const firstName = fullName.split(" ")[0];
+    await Promise.all([
+      sendAmbassadorWelcome(email, firstName),
+      addToAudience("RESEND_AUDIENCE_MOMS", email, firstName),
+    ]);
+  }
 
   if (!res.ok) {
     const detail = await res.text().catch(() => "");
