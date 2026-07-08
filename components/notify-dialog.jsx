@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PartyPopper } from "lucide-react";
+import { getUtmSource } from "@/lib/utm";
 
 const AUTO_OPEN_DELAY_MS = 6000;
 
@@ -64,7 +65,12 @@ export function NotifyDialog({ open, onOpenChange, autoOpen = true }) {
       const res = await fetch("/api/notify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ method, contact, zip: zip.trim() || null }),
+        body: JSON.stringify({
+          method,
+          contact,
+          zip: zip.trim() || null,
+          source: getUtmSource(),
+        }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));

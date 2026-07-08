@@ -27,6 +27,10 @@ export async function POST(request) {
     typeof body.zip === "string" && /^\d{5}$/.test(body.zip.trim())
       ? body.zip.trim()
       : null;
+  const source =
+    typeof body.source === "string" && body.source.trim()
+      ? body.source.trim().slice(0, 180)
+      : null;
 
   if (!contact) {
     return NextResponse.json({ error: "Contact is required." }, { status: 400 });
@@ -57,7 +61,7 @@ export async function POST(request) {
       "Content-Type": "application/json",
       Prefer: "return=minimal",
     },
-    body: JSON.stringify({ method, contact, zip }),
+    body: JSON.stringify({ method, contact, zip, source }),
   });
 
   // 409 = duplicate signup; treat as success (don't leak who's registered)

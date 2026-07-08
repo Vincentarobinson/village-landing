@@ -4,6 +4,7 @@ import * as React from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import { getUtmSource } from "@/lib/utm";
 
 /* Inline hero capture — Care.com-style zip + email bar. */
 export function HeroSignup() {
@@ -28,6 +29,7 @@ export function HeroSignup() {
           method: "email",
           contact: email.trim(),
           zip: zip.trim() || null,
+          source: getUtmSource(),
         }),
       });
       if (!res.ok) throw new Error("Something went wrong — try again.");
